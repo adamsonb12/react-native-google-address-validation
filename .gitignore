@@ -17,3 +17,4 @@ web-build/
 
 # we use yarn 'round here
 package-lock.json
+yarn-error.log
