@@ -72,6 +72,7 @@ export const AddressValidation = ({
     <ThemeProvider defaultColors={{ ...defaultColors }}>
       <StyledComponentsThemeProvider
         theme={{
+          // @ts-ignore => ignore the type error if the host project is also using styled components to avoid type error complaints
           colors: defaultColors,
         }}
       >
