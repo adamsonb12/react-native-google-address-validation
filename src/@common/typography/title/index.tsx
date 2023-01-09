@@ -1,17 +1,10 @@
-import { Text, TextProps } from "../text";
+import styled from "styled-components/native";
+import { Text } from "../text";
 
-export const Title = ({ children, ...props }: TextProps) => {
-  return (
-    <Text variant="titleMedium" {...props}>
-      {children}
-    </Text>
-  );
-};
+export const Title = styled(Text)`
+  font-size: 20px;
+`;
 
-export const TitleSmall = ({ children, ...props }: TextProps) => {
-  return (
-    <Text variant="titleSmall" {...props}>
-      {children}
-    </Text>
-  );
-};
+export const TitleSmall = styled(Text)`
+  font-size: 17px;
+`;

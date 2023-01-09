@@ -79,6 +79,14 @@ const ButtonsContainer = styled(View)`
   align-items: center;
 `;
 
+const StyledSecondaryButton = styled(SecondaryButton)`
+  width: 48%;
+`;
+
+const StyledPrimaryButton = styled(PrimaryButton)`
+  width: 48%;
+`;
+
 export const InvalidAddressConfirmation = ({
   userEnteredAddress,
   onConfirm,
@@ -124,8 +132,12 @@ export const InvalidAddressConfirmation = ({
 
       <Grower>
         <ButtonsContainer>
-          <SecondaryButton onPress={onCancel}>{cancelLabel}</SecondaryButton>
-          <PrimaryButton onPress={onConfirm}>{submitLabel}</PrimaryButton>
+          <StyledSecondaryButton onPress={onCancel}>
+            {cancelLabel}
+          </StyledSecondaryButton>
+          <StyledPrimaryButton onPress={onConfirm}>
+            {submitLabel}
+          </StyledPrimaryButton>
         </ButtonsContainer>
       </Grower>
     </Container>

@@ -86,6 +86,14 @@ const ButtonsContainer = styled(View)`
   align-items: center;
 `;
 
+const StyledSecondaryButton = styled(SecondaryButton)`
+  width: 48%;
+`;
+
+const StyledPrimaryButton = styled(PrimaryButton)`
+  width: 48%;
+`;
+
 export const AddressSelect = ({
   userEnteredAddress,
   googleSuggestedAddress,
@@ -159,8 +167,10 @@ export const AddressSelect = ({
 
       <Grower>
         <ButtonsContainer>
-          <SecondaryButton onPress={onCancel}>{cancelLabel}</SecondaryButton>
-          <PrimaryButton
+          <StyledSecondaryButton onPress={onCancel}>
+            {cancelLabel}
+          </StyledSecondaryButton>
+          <StyledPrimaryButton
             onPress={() => {
               if (selectedAddress === "USER") {
                 onConfirm({
@@ -179,7 +189,7 @@ export const AddressSelect = ({
             }}
           >
             {submitLabel}
-          </PrimaryButton>
+          </StyledPrimaryButton>
         </ButtonsContainer>
       </Grower>
     </Container>

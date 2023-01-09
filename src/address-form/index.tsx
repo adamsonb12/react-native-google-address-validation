@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 import { AddressField, RegionPicker } from "../address-field";
 import { Loading } from "../@common/loading";
-import { SecondaryButton } from "../@common/buttons/secondary";
+import { PrimaryButton } from "../@common/buttons/primary";
 
 import {
   Address,
@@ -319,7 +319,7 @@ export const AddressForm = ({
       </Row>
 
       <Grower>
-        <SecondaryButton onPress={onSubmit}>{continueLabel}</SecondaryButton>
+        <PrimaryButton onPress={onSubmit}>{continueLabel}</PrimaryButton>
       </Grower>
     </Container>
   );

@@ -1,9 +1,7 @@
-import { Text, TextProps } from "../text";
+import styled from "styled-components/native";
+import { Text } from "../text";
 
-export const Label = ({ children, ...props }: TextProps) => {
-  return (
-    <Text variant="labelMedium" {...props}>
-      {children}
-    </Text>
-  );
-};
+export const Label = styled(Text)`
+  font-size: 14px;
+  font-weight: light;
+`;
