@@ -1,8 +1,15 @@
 {
   "name": "react-native-google-address-validation",
+  "title": "React Native Google Address Validation",
   "version": "1.0.0",
   "description": "React Native component for user input addresses, using the Google Places API for auto complete and the Google Address Validation API for address validation",
   "main": "index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamsonb12/react-native-google-address-validation.git",
+    "baseUrl": "https://github.com/adamsonb12/react-native-google-address-validation"
+  },
+  "homepage": "https://github.com/adamsonb12/react-native-google-address-validation",
   "scripts": {
     "check.types": "tsc",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.json",
@@ -10,8 +17,25 @@
     "format": "prettier --check .",
     "format.fix": "prettier --write ."
   },
-  "author": "Brett Adamson",
+  "keywords": [
+    "react-native",
+    "react-native-google-address-validation",
+    "google auto complete address validation",
+    "address validation",
+    "address verification",
+    "google address validation",
+    "google address api"
+  ],
+  "author": {
+    "name": "Brett Adamson",
+    "email": "adamsonb12@gmail.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
   "dependencies": {
     "react-native-dropdown-picker": "^5.4.4",
     "react-native-paper": "^5.1.2",
