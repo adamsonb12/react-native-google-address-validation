@@ -1,48 +1,32 @@
-import React, { ReactNode } from "react";
-import { Button, ButtonProps } from "react-native-paper";
+import React from "react";
 import styled from "styled-components/native";
 
-import { Text } from "../typography/text";
-
 import { useThemeContext } from "../theme";
+import { Button, ButtonProps } from ".";
 
-const StyledText = styled(Text)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${(props) => props.theme.colors.primary};
+const StyledButton = styled(Button)`
+  background-color: ${(props) => props.theme.colors.background};
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => props.theme.colors.neutral};
 `;
 
 export const SecondaryButton = ({
   onPress,
   children,
   disabled,
-  mode = "outlined",
   ...props
-}: {
-  onPress: () => void;
-  children: ReactNode;
-  disabled?: boolean;
-  mode?: "text" | "outlined" | "contained" | "elevated" | "contained-tonal";
-} & Partial<ButtonProps>) => {
+}: ButtonProps) => {
   const { colors } = useThemeContext();
 
   return (
-    <Button
-      mode={mode}
+    <StyledButton
       onPress={onPress}
-      theme={{
-        colors: {
-          primary: colors.primary,
-        },
-      }}
-      style={{
-        borderColor: colors.neutral,
-      }}
       disabled={disabled}
+      fontColor={colors.primary}
       {...props}
     >
-      <StyledText>{children}</StyledText>
-    </Button>
+      {children}
+    </StyledButton>
   );
 };

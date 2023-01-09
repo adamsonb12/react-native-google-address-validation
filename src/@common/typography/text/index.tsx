@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
-import { Text as PaperText } from "react-native-paper";
 import { ReactNode } from "react";
+import { Text as NativeText } from "react-native";
 
-export const Text = styled(PaperText).attrs({
+export const Text = styled(NativeText).attrs({
   maxFontSizeMultiplier: 1.3,
   minimumFontScale: 0.8,
 })`

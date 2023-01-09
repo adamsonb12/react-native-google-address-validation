@@ -6,6 +6,9 @@ import { ThemeProvider } from "./src/@common/theme";
 import { defaultTheme } from "./src/@common/theme/default-theme";
 import { Address, FormattedAddress } from "./src/utils";
 
+export type { RegionCode } from "./src/region-codes";
+export type { FormattedAddress, Address } from "./src/utils";
+
 export interface AddressValidationProps {
   // validator props
   address: Address;
