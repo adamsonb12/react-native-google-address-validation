@@ -125,7 +125,7 @@ export const InvalidAddressConfirmation = ({
       <Grower>
         <ButtonsContainer>
           <SecondaryButton onPress={onCancel}>{cancelLabel}</SecondaryButton>
-          <PrimaryButton onPress={() => onConfirm}>{submitLabel}</PrimaryButton>
+          <PrimaryButton onPress={onConfirm}>{submitLabel}</PrimaryButton>
         </ButtonsContainer>
       </Grower>
     </Container>
