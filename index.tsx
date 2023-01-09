@@ -1,13 +1,14 @@
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components/native";
-import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 
 import { AddressValidation as AddressValidationWorkflow } from "./src";
 import { ThemeProvider } from "./src/@common/theme";
 import { defaultTheme } from "./src/@common/theme/default-theme";
 import { Address, FormattedAddress } from "./src/utils";
+import PortalHost from "./src/portal/host";
 
 export type { RegionCode } from "./src/region-codes";
 export type { FormattedAddress, Address } from "./src/utils";
+export { PortalHost as ReactNativeGoogleAddressValidationPortalProvider };
 
 export interface AddressValidationProps {
   // validator props
@@ -74,17 +75,7 @@ export const AddressValidation = ({
           colors: defaultColors,
         }}
       >
-        <PaperProvider
-          theme={{
-            ...DefaultTheme,
-            colors: {
-              ...DefaultTheme.colors,
-              ...defaultColors,
-            },
-          }}
-        >
-          <AddressValidationWorkflow {...props} />
-        </PaperProvider>
+        <AddressValidationWorkflow {...props} />
       </StyledComponentsThemeProvider>
     </ThemeProvider>
   );

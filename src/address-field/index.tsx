@@ -2,10 +2,10 @@ import { ReactNode, useEffect, useState } from "react";
 import { TextInput, View } from "react-native";
 import styled from "styled-components/native";
 import DropDownPicker from "react-native-dropdown-picker";
-import { Portal } from "react-native-paper";
 
 import { Label } from "../@common/typography/label";
 import { Text } from "../@common/typography/text";
+import Portal from "../portal";
 
 import { useThemeContext } from "../@common/theme";
 import { RegionCode } from "../region-codes";
