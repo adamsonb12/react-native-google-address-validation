@@ -153,12 +153,12 @@ Images of this library in use in production
 
 ### Address Form
 
-![address form](https://github.com/adamsonb12/react-native-google-address-validation/tree/main/images/address_form.png?raw=true)
+![address form](https://raw.githubusercontent.com/adamsonb12/react-native-google-address-validation/main/images/address_form.png)
 
 ### Address Auto Completion
 
-![address auto completion](https://github.com/adamsonb12/react-native-google-address-validation/tree/main/images/address_autocomplete.png?raw=true)
+![address auto completion](https://raw.githubusercontent.com/adamsonb12/react-native-google-address-validation/main/images/address_autocomplete.png)
 
 ### Address Confirmation
 
-![address confirmation](https://github.com/adamsonb12/react-native-google-address-validation/tree/main/images/address_confirmation.png?raw=true)
+![address confirmation](https://raw.githubusercontent.com/adamsonb12/react-native-google-address-validation/main/images/address_confirmation.png)
