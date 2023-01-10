@@ -79,11 +79,11 @@ export const UserInputAddressScreen = () => {
 };
 ```
 
-One this to remember here, is that the onChange returns an in-progress address, which has a regionCode, see type Address. Once the address has been validated by Google and confirmed by the user, it becomes a FormattedAddress type with a country instead of a region code, which could be formatted by google differently than a strict region code.
+One thing to remember here, is that the onChange returns an in-progress address, which has a regionCode, see type [Address](https://github.com/adamsonb12/react-native-google-address-validation/blob/main/src/utils.ts#L53). Once the address has been validated by Google and confirmed by the user, it becomes type [FormattedAddress](https://github.com/adamsonb12/react-native-google-address-validation/blob/main/src/utils.ts#L62) with a country instead of a region code, which could be formatted by google differently than a strict region code.
 
 ## Customization
 
-Styles and content can be customized so that colors of the workflow match your app's theme and tone.
+Styles and content can be customized so that colors of the workflow match your app's theme and tone. You can see all available props [here](https://github.com/adamsonb12/react-native-google-address-validation/blob/main/index.tsx#L13)
 
 ```js
 import {
