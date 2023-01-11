@@ -31,9 +31,11 @@ import { ReactNativeGoogleAddressValidationPortalProvider } from "react-native-g
 import App from "./src/App";
 
 export default function App() {
-  <ReactNativeGoogleAddressValidationPortalProvider>
-    <App />
-  </ReactNativeGoogleAddressValidationPortalProvider>;
+  return (
+    <ReactNativeGoogleAddressValidationPortalProvider>
+      <App />
+    </ReactNativeGoogleAddressValidationPortalProvider>
+  );
 }
 ```
 
