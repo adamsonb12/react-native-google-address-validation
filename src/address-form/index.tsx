@@ -75,6 +75,7 @@ export const AddressForm = ({
   onSubmit,
   showErrors = false,
   missingDataErrors,
+  regionCodes,
   ...props
 }: {
   address: Address;
@@ -99,6 +100,7 @@ export const AddressForm = ({
       regionCode: string;
     }
   > | null;
+  regionCodes?: RegionCode[];
 }) => {
   const addressErrors = validateAddress(address);
   const debouncedStreetOne = useDebounce(address.streetOne, 300);
@@ -315,6 +317,7 @@ export const AddressForm = ({
               ? missingDataErrors?.regionCode ?? addressErrors.regionCode
               : ""
           }
+          regionCodes={regionCodes}
         />
       </Row>
 

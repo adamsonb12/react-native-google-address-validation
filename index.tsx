@@ -5,6 +5,7 @@ import { ThemeProvider } from "./src/@common/theme";
 import { defaultTheme } from "./src/@common/theme/default-theme";
 import { Address, FormattedAddress } from "./src/utils";
 import PortalHost from "./src/portal/host";
+import { RegionCode } from "./src/region-codes";
 
 export type { RegionCode } from "./src/region-codes";
 export type { FormattedAddress, Address } from "./src/utils";
@@ -17,6 +18,7 @@ export interface AddressValidationProps {
   googleAddressValidationApiKey: string;
   onChange: (address: Address) => void;
   onFinish: (address: FormattedAddress) => void;
+  regionCodes?: RegionCode[];
   // content props
   streetOneLabel?: string;
   streetOnePlaceholder?: string;
