@@ -120,6 +120,7 @@ export const UserInputAddressScreen = () => {
       onFinish={(confirmedAddress) => console.log(confirmedAddress)}
       googlePlacesApiKey={GOOGLE_PLACES_KEY}
       googleAddressValidationApiKey={GOOGLE_ADDRESS_VALIDATION_KEY}
+      regionCodes={["US"]}
       // label & content customization
       streetOneLabel="Home sweet home"
       streetOnePlaceholder="Your home street address"
@@ -148,6 +149,8 @@ export const UserInputAddressScreen = () => {
   );
 };
 ```
+
+The region codes filter enables the ability to choose which countries show up in the country dropdown. It is optional, not including it (see basic example) will have ALL the countries in the country/region dropdown.
 
 ## Screenshots
 

@@ -11,6 +11,7 @@ import {
 } from "./utils";
 import { AddressSelect } from "./address-select";
 import { InvalidAddressConfirmation } from "./invalid-address-confirmation";
+import { RegionCode } from "./region-codes";
 
 type Frame =
   | "ADDRESS_INPUT"
@@ -36,6 +37,7 @@ export const AddressValidation = ({
   regionCodeLabel = "Country",
   continueLabel = "Continue",
   onFinish,
+  regionCodes,
   ...props
 }: {
   address: Address;
@@ -55,6 +57,7 @@ export const AddressValidation = ({
   regionCodeLabel?: string;
   continueLabel?: string;
   onFinish: (address: FormattedAddress) => void;
+  regionCodes?: RegionCode[];
 }) => {
   const [frame, setFrame] = useState<Frame>("ADDRESS_INPUT");
   const [showFormErrors, setShowFormErrors] = useState(false);
@@ -171,6 +174,7 @@ export const AddressValidation = ({
         showErrors={showFormErrors}
         onSubmit={onSubmitForm}
         missingDataErrors={missingDataErrors}
+        regionCodes={regionCodes}
         {...props}
       />
     );

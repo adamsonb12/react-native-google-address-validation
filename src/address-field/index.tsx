@@ -141,11 +141,13 @@ export const RegionPicker = ({
   label,
   onChange,
   error = "",
+  regionCodes,
 }: {
   value: RegionCode;
   label: string;
   onChange: (v: RegionCode) => void;
   error?: string;
+  regionCodes?: RegionCode[];
 }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState<RegionCode>(defaultValue);
@@ -189,7 +191,13 @@ export const RegionPicker = ({
         value={value}
         open={open}
         setOpen={setOpen}
-        items={items}
+        items={
+          regionCodes
+            ? items.filter(
+                (item) => !!regionCodes.find((code) => code === item.value)
+              )
+            : items
+        }
         setValue={setValue}
         style={{
           borderColor: error ? colors.danger : colors.neutral,
