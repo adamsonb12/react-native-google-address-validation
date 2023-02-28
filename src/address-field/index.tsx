@@ -110,6 +110,7 @@ const ChildrenWrapper = ({ children }: { children: ReactNode }) => {
       <InputWrapper
         collapsable={false}
         onLayout={(event) => {
+          // @ts-ignore
           event.target?.measure((x, y, width, height, screenX, screenY) => {
             setPageY(screenY);
             setPageX(screenX);
