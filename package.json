@@ -1,7 +1,7 @@
 {
   "name": "react-native-google-address-validation",
   "title": "React Native Google Address Validation",
-  "version": "1.1.7",
+  "version": "1.1.8-beta.0",
   "description": "Provides a workflow to collect and validate user addresses using Google's Places and Address Validation APIs in React Native",
   "main": "index.tsx",
   "repository": {
@@ -48,19 +48,18 @@
     "@tsconfig/react-native": "^2.0.3",
     "@types/jest": "^29.2.5",
     "@types/react": "^18.0.26",
-    "@types/react-native": "^0.70.8",
     "@types/react-test-renderer": "^18.0.0",
-    "@types/styled-components-react-native": "^5.2.0",
+    "@types/styled-components-react-native": "^5.2.1",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
-    "prettier": "^2.8.1",
-    "typescript": "^4.9.4"
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": ">= 18.0.0",
     "react-dom": "^18.2.0",
-    "react-native": ">= 0.70.5"
+    "react-native": ">= 0.71.3"
   }
 }
