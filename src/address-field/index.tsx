@@ -83,7 +83,7 @@ export const AddressField = ({
 };
 
 const DropdownContainer = styled(View)`
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: #fff;
   width: 100%;
   position: absolute;
 
@@ -91,13 +91,13 @@ const DropdownContainer = styled(View)`
   border-bottom-left-radius: 4px;
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: ${(props) => props.theme.colors.neutral};
+  border-left-color: #b0c4d7;
   border-right-style: solid;
   border-right-width: 1px;
-  border-right-color: ${(props) => props.theme.colors.neutral};
+  border-right-color: #b0c4d7;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: ${(props) => props.theme.colors.neutral};
+  border-bottom-color: #b0c4d7;
 `;
 
 const ChildrenWrapper = ({ children }: { children: ReactNode }) => {
