@@ -1,7 +1,7 @@
 {
   "name": "react-native-google-address-validation",
   "title": "React Native Google Address Validation",
-  "version": "1.1.10-beta.0",
+  "version": "1.1.10",
   "description": "Provides a workflow to collect and validate user addresses using Google's Places and Address Validation APIs in React Native",
   "main": "index.tsx",
   "repository": {
