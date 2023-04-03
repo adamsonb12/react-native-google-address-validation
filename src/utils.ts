@@ -198,12 +198,12 @@ export const getGooglePlacesApiAddressObject = (
   });
 
   return {
-    streetOne: `${address.home} ${address.street}`,
-    streetTwo: address.streetLineTwo,
-    locality: address.city,
-    administrativeArea: address.region,
-    postalCode: address.postal_code,
-    country: address.country,
+    streetOne: `${address.home} ${address.street}`.trim(),
+    streetTwo: address.streetLineTwo.trim(),
+    locality: address.city.trim(),
+    administrativeArea: address.region.trim(),
+    postalCode: address.postal_code.trim(),
+    country: address.country.trim(),
   };
 };
 

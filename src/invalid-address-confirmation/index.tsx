@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 
 import { Title, TitleSmall } from "../@common/typography/title";
 import { Label } from "../@common/typography/label";
@@ -37,7 +37,7 @@ const CardInfoSection = styled(View)`
 `;
 
 const Circle = styled(View)`
-  border-radius: 50%;
+  border-radius: ${Platform.OS === "ios" ? "50%" : "50px"};
   border-style: solid;
   border-color: ${(props) => props.theme.colors.primary};
   border-width: 2px;
@@ -50,7 +50,7 @@ const Circle = styled(View)`
 `;
 
 const ActiveInnerCircle = styled(View)`
-  border-radius: 50%;
+  border-radius: ${Platform.OS === "ios" ? "50%" : "50px"};
   background-color: ${(props) => props.theme.colors.primary};
   width: 12px;
   height: 12px;
