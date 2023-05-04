@@ -38,6 +38,7 @@ export const AddressValidation = ({
   continueLabel = "Continue",
   onFinish,
   regionCodes,
+  enableUspsCass = false,
   ...props
 }: {
   address: Address;
@@ -58,6 +59,7 @@ export const AddressValidation = ({
   continueLabel?: string;
   onFinish: (address: FormattedAddress) => void;
   regionCodes?: RegionCode[];
+  enableUspsCass?: boolean;
 }) => {
   const [frame, setFrame] = useState<Frame>("ADDRESS_INPUT");
   const [showFormErrors, setShowFormErrors] = useState(false);
@@ -96,6 +98,7 @@ export const AddressValidation = ({
             postalCode: address.postalCode,
             regionCode: address.regionCode,
           },
+          enableUspsCass: enableUspsCass,
         }),
       }
     );

@@ -43,6 +43,7 @@ export interface AddressValidationProps {
   disabledColor?: string;
   neutralColor?: string;
   placeholderColor?: string;
+  enableUspsCass?: boolean;
 }
 
 export const AddressValidation = ({
