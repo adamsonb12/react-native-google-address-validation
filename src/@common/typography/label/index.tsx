@@ -3,5 +3,5 @@ import { Text } from "../text";
 
 export const Label = styled(Text)`
   font-size: 14px;
-  font-weight: light;
+  font-weight: 100;
 `;
