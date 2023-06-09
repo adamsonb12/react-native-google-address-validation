@@ -26,6 +26,7 @@ export interface AddressValidationProps {
   streetTwoPlaceholder?: string;
   localityLabel?: string;
   localityPlaceholder?: string;
+  localityClarifier?: string;
   administrativeAreaLabel?: string;
   administrativeAreaPlaceholder?: string;
   postalCodeLabel?: string;

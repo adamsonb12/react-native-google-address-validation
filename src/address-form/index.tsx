@@ -66,6 +66,7 @@ export const AddressForm = ({
   streetTwoPlaceholder = "Apt, suite, or unit",
   localityLabel = "City",
   localityPlaceholder = "City",
+  localityClarifier,
   administrativeAreaLabel = "State",
   administrativeAreaPlaceholder = "State",
   postalCodeLabel = "Zip Code",
@@ -87,6 +88,7 @@ export const AddressForm = ({
   streetTwoPlaceholder?: string;
   localityLabel?: string;
   localityPlaceholder?: string;
+  localityClarifier?: string;
   administrativeAreaLabel?: string;
   administrativeAreaPlaceholder?: string;
   postalCodeLabel?: string;
@@ -154,7 +156,10 @@ export const AddressForm = ({
           ...address,
           streetOne: addressComponents.streetOne,
           streetTwo: addressComponents.streetTwo ?? "",
-          locality: addressComponents.locality,
+          locality:
+            addressComponents.locality.length > 17
+              ? addressComponents.locality.slice(0, 17)
+              : addressComponents.locality,
           administrativeArea: addressComponents.administrativeArea,
           postalCode: addressComponents.postalCode,
           regionCode: addressComponents.country as RegionCode,
@@ -248,6 +253,8 @@ export const AddressForm = ({
           value={address.locality}
           label={localityLabel}
           placeholder={localityPlaceholder}
+          maxLength={18}
+          clarifier={localityClarifier}
           onChange={(text) => {
             onChange({
               ...address,

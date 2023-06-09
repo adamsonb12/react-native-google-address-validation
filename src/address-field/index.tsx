@@ -46,6 +46,11 @@ const Error = styled(Text)`
   z-index: 0;
 `;
 
+const FieldClarifier = styled(Label)`
+  padding-left: 8px;
+  margin-top: 4px;
+`;
+
 export const AddressField = ({
   value,
   label,
@@ -54,6 +59,8 @@ export const AddressField = ({
   error = "",
   onFocus,
   onBlur,
+  maxLength = 100,
+  clarifier,
   children,
 }: {
   value: string;
@@ -64,6 +71,8 @@ export const AddressField = ({
   children?: ReactNode;
   onFocus?: () => void;
   onBlur?: () => void;
+  maxLength?: number;
+  clarifier?: string;
 }) => {
   return (
     <FieldContainer>
@@ -75,7 +84,9 @@ export const AddressField = ({
         onFocus={onFocus}
         onBlur={onBlur}
         hasError={!!error}
+        maxLength={maxLength}
       />
+      {clarifier && <FieldClarifier>{clarifier}</FieldClarifier>}
       <ChildrenWrapper>{children}</ChildrenWrapper>
       <Error>{error}</Error>
     </FieldContainer>

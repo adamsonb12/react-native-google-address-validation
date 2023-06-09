@@ -30,6 +30,7 @@ export const AddressValidation = ({
   streetTwoPlaceholder = "Apt, suite, or unit",
   localityLabel = "City",
   localityPlaceholder = "City",
+  localityClarifier,
   administrativeAreaLabel = "State",
   administrativeAreaPlaceholder = "State",
   postalCodeLabel = "Zip Code",
@@ -51,6 +52,7 @@ export const AddressValidation = ({
   streetTwoPlaceholder?: string;
   localityLabel?: string;
   localityPlaceholder?: string;
+  localityClarifier?: string;
   administrativeAreaLabel?: string;
   administrativeAreaPlaceholder?: string;
   postalCodeLabel?: string;
@@ -135,8 +137,12 @@ export const AddressValidation = ({
           data.result.address.addressComponents
         );
 
-      setGoogleAddress(googleFormattedAddress);
-      setFrame("CHOOSE_VALID_ADDRESS");
+      if (googleFormattedAddress.locality.length > 17) {
+        setFrame("PROGRESS_WITH_INVALID_ADDRESS");
+      } else {
+        setGoogleAddress(googleFormattedAddress);
+        setFrame("CHOOSE_VALID_ADDRESS");
+      }
     } else if (data?.result?.address?.missingComponentTypes?.length > 0) {
       const missingData = getMissingTypeErrors(
         data.result.address.missingComponentTypes
@@ -168,6 +174,7 @@ export const AddressValidation = ({
         streetTwoPlaceholder={streetTwoPlaceholder}
         localityLabel={localityLabel}
         localityPlaceholder={localityPlaceholder}
+        localityClarifier={localityClarifier}
         administrativeAreaLabel={administrativeAreaLabel}
         administrativeAreaPlaceholder={administrativeAreaPlaceholder}
         postalCodeLabel={postalCodeLabel}
