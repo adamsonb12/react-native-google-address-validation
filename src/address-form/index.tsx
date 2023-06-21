@@ -154,8 +154,14 @@ export const AddressForm = ({
       if (addressComponents) {
         onChange({
           ...address,
-          streetOne: addressComponents.streetOne,
-          streetTwo: addressComponents.streetTwo ?? "",
+          streetOne:
+            addressComponents.streetOne.length > 34
+              ? addressComponents.streetOne.slice(0, 34)
+              : addressComponents.streetOne,
+          streetTwo:
+            addressComponents.streetTwo.length > 34
+              ? addressComponents.streetTwo.slice(0, 34)
+              : addressComponents.streetTwo,
           locality:
             addressComponents.locality.length > 17
               ? addressComponents.locality.slice(0, 17)
@@ -183,6 +189,7 @@ export const AddressForm = ({
       <AddressField
         value={address.streetOne}
         label={streetOneLabel}
+        maxLength={35}
         placeholder={streetOnePlaceholder}
         onChange={(text) => {
           if (!streetOneHasFocus) {
@@ -233,6 +240,7 @@ export const AddressForm = ({
         <AddressField
           value={address.streetTwo}
           label={streetTwoLabel}
+          maxLength={35}
           placeholder={streetTwoPlaceholder}
           onChange={(text) => {
             onChange({
@@ -274,6 +282,7 @@ export const AddressForm = ({
           <AddressField
             value={address.administrativeArea}
             label={administrativeAreaLabel}
+            maxLength={35}
             placeholder={administrativeAreaPlaceholder}
             onChange={(text) => {
               onChange({
@@ -293,6 +302,7 @@ export const AddressForm = ({
           <AddressField
             value={address.postalCode}
             label={postalCodeLabel}
+            maxLength={30}
             placeholder={postalCodePlaceholder}
             onChange={(text) => {
               onChange({
